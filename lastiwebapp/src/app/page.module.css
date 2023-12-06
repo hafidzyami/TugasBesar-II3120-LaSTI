@@ -396,3 +396,364 @@
   color: var(--color-white);
   font-family: var(--font-poppins);
 }
+
+.groupChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 16px;
+  background-color: #ffbe16;
+  width: 62px;
+  height: 62px;
+}
+.vectorIcon1 {
+  position: absolute;
+  top: 20.67px;
+  left: 17.22px;
+  width: 27.56px;
+  height: 20.67px;
+}
+.rectangleParent {
+  position: absolute;
+  top: 578px;
+  left: 837px;
+  width: 62px;
+  height: 62px;
+}
+.snackIcon {
+  position: absolute;
+  top: 448px;
+  left: 837px;
+  width: 62px;
+  height: 62px;
+}
+.aboutSectionChild {
+  position: absolute;
+  top: 116px;
+  left: 230.36px;
+  width: 478.23px;
+  height: 601.47px;
+  object-fit: cover;
+}
+.aboutSectionItem {
+  position: absolute;
+  top: 173.47px;
+  left: 120px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  width: 221px;
+  height: 281px;
+}
+.aboutSectionInner {
+  position: absolute;
+  top: 185.9px;
+  left: 132.88px;
+  width: 194.97px;
+  height: 255.67px;
+  object-fit: cover;
+  border-radius: var(--br-3xs);
+}
+.rectangleDiv {
+  position: absolute;
+  top: 425.47px;
+  left: 612px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  width: 195px;
+  height: 245px;
+}
+.groupIcon {
+  position: absolute;
+  top: 438.81px;
+  left: 624.9px;
+  width: 169.22px;
+  height: 218.88px;
+  object-fit: cover;
+  border-radius: var(--br-3xs);
+}
+.bestCreativeWorking1 {
+  position: absolute;
+  top: 102px;
+  left: 837px;
+  font-size: 36px;
+  letter-spacing: 0.3px;
+  line-height: 46px;
+  font-weight: 600;
+  display: inline-block;
+  width: 482px;
+}
+.loremIpsumPD4 {
+  position: absolute;
+  top: 256px;
+  left: 837px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  color: var(--color-darkslategray);
+  display: inline-block;
+  width: 482px;
+  opacity: 0.7;
+}
+.loremIpsumPD5 {
+  position: absolute;
+  top: 372px;
+  left: 928px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  color: var(--color-darkslategray);
+  display: inline-block;
+  width: 391px;
+  opacity: 0.7;
+}
+.loremIpsumDolor6 {
+  position: absolute;
+  top: 484px;
+  left: 928px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  color: var(--color-darkslategray);
+  display: inline-block;
+  width: 391px;
+  opacity: 0.7;
+}
+.loremIpsumDolor7 {
+  position: absolute;
+  top: 614px;
+  left: 928px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  color: var(--color-darkslategray);
+  display: inline-block;
+  width: 391px;
+  opacity: 0.7;
+}
+.open24Hours1 {
+  position: absolute;
+  top: 336px;
+  left: 928px;
+  font-size: var(--font-size-5xl);
+  letter-spacing: 0.3px;
+  line-height: 24px;
+}
+.freeSnack1 {
+  position: absolute;
+  top: 448px;
+  left: 928px;
+  font-size: var(--font-size-5xl);
+  letter-spacing: 0.3px;
+  line-height: 24px;
+}
+.enjoyGameZone1 {
+  position: absolute;
+  top: 578px;
+  left: 928px;
+  font-size: var(--font-size-5xl);
+  letter-spacing: 0.3px;
+  line-height: 24px;
+}
+.clockIcon {
+  position: absolute;
+  top: 336px;
+  left: 837px;
+  width: 62px;
+  height: 62px;
+}
+.aboutSection {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray);
+  font-family: var(--font-poppins);
+}
+
+.gameIcon {
+  position: absolute;
+  top: 596px;
+  left: 837px;
+  width: 62px;
+  height: 62px;
+}
+
+.loremIpsumDolor4 {
+  position: absolute;
+  top: 49px;
+  left: 2px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  display: inline-block;
+  width: 482px;
+}
+.testimonials {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+.label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 187px;
+  height: 42px;
+  font-size: 28px;
+  color: #ffbe16;
+}
+.desc {
+  position: absolute;
+  top: 144px;
+  left: 836px;
+  width: 484px;
+  height: 105px;
+}
+.card1Child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-13xl);
+  background-color: var(--color-mintcream);
+  width: 380px;
+  height: 313px;
+}
+.loremIpsumDolor5 {
+  position: absolute;
+  top: 175px;
+  left: 32px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  display: inline-block;
+  width: 316px;
+}
+.rateIcon {
+  position: absolute;
+  width: 58.11%;
+  top: 136px;
+  right: 33.47%;
+  left: 8.42%;
+  max-width: 100%;
+  overflow: hidden;
+  height: 23px;
+}
+.card1Item {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  border-radius: 60px;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+.celineDion {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-weight: 600;
+}
+.cafeOwner {
+  position: absolute;
+  top: 31px;
+  left: 0px;
+  font-size: var(--font-size-base);
+  font-family: var(--font-poppins);
+  color: var(--color-slategray);
+  display: inline-block;
+  width: 219px;
+}
+.name {
+  position: absolute;
+  top: 41px;
+  left: 116px;
+  width: 219px;
+  height: 55px;
+  font-size: var(--font-size-xl);
+  color: var(--color-darkslategray-100);
+  font-family: var(--font-sora);
+}
+.card1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 380px;
+  height: 313px;
+}
+.card3Item {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  border-radius: var(--br-17xl);
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+.card3 {
+  position: absolute;
+  top: 0px;
+  left: 820px;
+  width: 380px;
+  height: 313px;
+}
+.card2Child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-13xl);
+  background-color: #fff;
+  width: 380px;
+  height: 313px;
+}
+.rateIcon2 {
+  position: absolute;
+  width: 58.11%;
+  top: 134px;
+  right: 33.47%;
+  left: 8.42%;
+  max-width: 100%;
+  overflow: hidden;
+  height: 23px;
+}
+.card2 {
+  position: absolute;
+  top: 0px;
+  left: 410px;
+  width: 380px;
+  height: 313px;
+}
+.cards {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1200px;
+  height: 313px;
+}
+.testimonials1 {
+  position: absolute;
+  top: 362px;
+  left: 120px;
+  width: 1200px;
+  height: 313px;
+}
+.theySatisfiedWith1 {
+  position: absolute;
+  top: 144px;
+  left: 120px;
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 600;
+  color: var(--color-darkslategray-100);
+  display: inline-block;
+  width: 614px;
+}
+.descParent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-darkslategray-200);
+  font-family: var(--font-poppins);
+}
