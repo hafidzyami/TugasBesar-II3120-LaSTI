@@ -4,33 +4,82 @@ import React, { useEffect, useState } from "react";
 import supabase from "@/app/config/supabase";
 import { useParams } from "next/navigation";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const HomePage = () => {
   const params = useParams();
+  const [show, setShow] = useState(false);
   const [isIn, setIsIn] = useState(false);
   const [imageUrl, setImageUrl] = useState();
   const [isDone, setIsDone] = useState(false);
   const [timeIn, setTimeIn] = useState(null);
   const [timeOut, setTimeOut] = useState(null);
   const [isBayar, setIsBayar] = useState(false);
+  const [totalWaktu, setTotalWaktu] = useState(0);
 
-  const calculateFee = (timeOut, timeIn) => {
-    console.log(timeOut)
-    console.log(timeIn)
-    // Parse the date strings into Date objects
-    const dateIn = new Date(timeIn);
-    const dateOut = new Date(timeOut);
+  function calculateHourDifference(timestamp1, timestamp2) {
+    // Parse timestamps into Date objects
+    const date1 = parseTimestamp(timestamp1);
+    const date2 = parseTimestamp(timestamp2);
 
-    console.log(dateIn)
-    console.log(dateOut)
+    // Calculate time difference in milliseconds
+    const timeDifference = Math.abs(date2 - date1);
 
-    // Calculate the time difference in milliseconds
-    const timeDifferenceMs =  Math.abs(dateIn - dateOut);
+    // Convert milliseconds to hours
+    const hoursDifference = timeDifference / (1000 * 60 * 60);
 
-    // Calculate the time difference in hours
-    const timeDifferenceHours = timeDifferenceMs / (1000 * 60 * 60);
-    console.log(timeDifferenceHours)
-    return timeDifferenceHours
+    return Math.ceil(hoursDifference);
+  }
+
+  function parseTimestamp(timestamp) {
+    const [datePart, timePart] = timestamp.split(" ");
+    const [day, month, year] = datePart.split("-").map(Number);
+    const [hours, minutes, seconds] = timePart.split(":").map(Number);
+
+    // Months are 0-indexed in JavaScript Dates, so subtract 1 from the month
+    return new Date(year, month - 1, day, hours, minutes, seconds);
+  }
+
+  const inputTransaksi = async () => {
+    const { data, error } = await supabase
+      .from("Transaksi")
+      .insert([
+        {
+          username: params.username,
+          timeIn: timeIn,
+          timeOut: timeOut,
+          biaya: calculateHourDifference(timeIn, timeOut) * 5000,
+        },
+      ])
+      .select();
+
+    if (error) {
+      window.alert("Gagal melakukan pembayaran!")
+    }
+  };
+
+  const handleBayar2 = () =>{
+    setShow(true);
+    setTotalWaktu(calculateHourDifference(timeIn, timeOut));
+  }
+
+  const handleBayar = async (e) => {
+    // Ini Bayar
+    setTimeIn(null);
+    setTimeOut(null);
+    setIsDone(false);
+    setIsBayar(false);
+    setIsIn(false);
+    setShow(false);
+
+    inputTransaksi();
+
+    const { data, error } = await supabase
+      .from("Member")
+      .update({ timeIn: null, timeOut: null })
+      .eq("username", params.username)
+      .select();
+    window.alert("Berhasil melakukan pembayaran!")
   };
 
   const channels = supabase
@@ -65,6 +114,7 @@ const HomePage = () => {
         console.log("Sudah masuk");
       } else if (data[0].timeOut != null && data[0].timeIn != null) {
         setIsDone(true);
+        setImageUrl(`https://barcodeapi.org/api/qr/tI${params.username}`);
       }
     }
   };
@@ -74,13 +124,37 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-white">
+      {/* Modal */}
+      <>
+        <Modal show={show} onHide={()=>{setShow(false)}}>
+          <Modal.Header closeButton>
+            <Modal.Title>Konfirmasi Pembayaran</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>Username : {params.username}</p>
+            <p>Waktu Masuk : {timeIn}</p>
+            <p>Waktu Keluar : {timeOut}</p>
+            <p>Biaya per jam : Rp 5000</p>
+            <p>Total waktu pembulatan ke atas : {totalWaktu} jam</p>
+            <p>Biaya total : Rp {totalWaktu * 5000}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={()=>{setShow(false)}}>
+              Batal
+            </Button>
+            <Button variant="success" onClick={handleBayar}>
+              Bayar
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
       HomePage
       <div className="mt-5">
         {!isIn && !isDone ? <p>Barcode Masuk:</p> : <></>}
         {isIn && !isDone ? <p>Barcode Keluar:</p> : <></>}
         {isDone ? (
-          <Button variant="primary" className="mt-3" onClick={()=> {setIsBayar(true)}}>
+          <Button variant="primary" className="mt-3" onClick={handleBayar2}>
             Bayar
           </Button>
         ) : (
@@ -91,7 +165,6 @@ const HomePage = () => {
         <p>Waktu Keluar: {timeOut}</p>
 
         {isBayar ? <p>{calculateFee(timeOut, timeIn)}</p> : <></>}
-        
       </div>
     </div>
   );

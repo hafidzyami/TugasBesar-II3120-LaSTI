@@ -1,15 +1,34 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
+import supabase from "../config/supabase";
 
 const LoginCustomer = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+  
+  const router = useRouter();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    let { data: Member, error } = await supabase
+      .from("Member")
+      .select("*")
+      .eq("username", username)
+      .eq("password", password);
+
+    if(error){
+      window.alert("Invalid Credentials!")
+      setPassword("")
+      setUsername("")
+    }
+    else{
+      router.push(`/member/${username}`)
+    }
   };
+
   return (
     <div className="d-flex">
       <div>

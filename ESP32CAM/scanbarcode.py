@@ -21,7 +21,7 @@ def get_current_timestamp():
 #cap = cv2.VideoCapture(0)
 font = cv2.FONT_HERSHEY_PLAIN
  
-url='http://192.168.0.167/'
+url='http://192.168.0.168/'
 cv2.namedWindow("live transmission", cv2.WINDOW_AUTOSIZE)
  
 prev=""
