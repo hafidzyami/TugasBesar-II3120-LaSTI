@@ -757,3 +757,365 @@
   color: var(--color-darkslategray-200);
   font-family: var(--font-poppins);
 }
+
+.ourLatestBlog1 {
+  position: relative;
+  letter-spacing: 0.3px;
+  line-height: 58px;
+  font-weight: 600;
+  justify-self: center;
+  display: inline-block;
+}
+.whyYourBusiness {
+  margin: 0;
+}
+.graphicDesign {
+  position: absolute;
+  width: 100%;
+  top: calc(50% + 17.5px);
+  left: 0%;
+  line-height: 33px;
+  font-weight: 600;
+  display: inline-block;
+  height: 77px;
+}
+.courses {
+  position: absolute;
+  width: 30.48%;
+  top: calc(50% + 32.46px);
+  left: 0%;
+  letter-spacing: 1px;
+  line-height: 12px;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+.groupChild {
+  position: absolute;
+  top: -0.5px;
+  left: 80.98px;
+  border-top: 1px solid var(--color-gainsboro);
+  box-sizing: border-box;
+  width: 21.28px;
+  height: 1px;
+}
+.courses1 {
+  position: absolute;
+  width: 49.92%;
+  top: calc(50% + 32.46px);
+  left: 50.08%;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  color: var(--color-gray-100);
+  display: inline-block;
+  height: 15.39px;
+  opacity: 0.3;
+  mix-blend-mode: normal;
+}
+.coursesParent {
+  position: absolute;
+  width: 70.94%;
+  top: calc(50% - 94.5px);
+  right: 29.06%;
+  left: 0%;
+  height: 95.7px;
+  font-size: var(--font-size-smi);
+  color: var(--color-mediumseagreen);
+}
+.graphicDesignParent {
+  position: absolute;
+  width: 29.16%;
+  top: calc(50% + 51px);
+  right: 70.84%;
+  left: 0%;
+  height: 189px;
+}
+.courses2 {
+  position: absolute;
+  width: 33.89%;
+  top: calc(50% + 32.46px);
+  left: 0%;
+  letter-spacing: 1px;
+  line-height: 12px;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+.groupItem {
+  position: absolute;
+  top: -0.5px;
+  left: 6.42px;
+  border-top: 1px solid var(--color-gainsboro);
+  box-sizing: border-box;
+  width: 20.29px;
+  height: 1px;
+}
+.courses3 {
+  position: absolute;
+  width: 47.48%;
+  top: calc(50% + 32.46px);
+  left: 52.52%;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  color: var(--color-gray-100);
+  display: inline-block;
+  height: 15.39px;
+  opacity: 0.3;
+  mix-blend-mode: normal;
+}
+.coursesGroup {
+  position: absolute;
+  width: 70.94%;
+  top: calc(50% - 94.65px);
+  right: 29.06%;
+  left: 0%;
+  height: 95.7px;
+}
+.graphicDesign1 {
+  position: absolute;
+  width: 99.92%;
+  top: calc(50% + 17.65px);
+  left: 0.08%;
+  font-size: var(--font-size-4xl);
+  line-height: 33px;
+  font-weight: 600;
+  color: var(--color-gray-100);
+  display: inline-block;
+  height: 77px;
+}
+.groupDiv {
+  position: absolute;
+  width: 29.16%;
+  top: calc(50% + 50.7px);
+  right: 35.53%;
+  left: 35.3%;
+  height: 189.3px;
+  font-size: var(--font-size-smi);
+  color: var(--color-mediumseagreen);
+}
+.frameChild {
+  position: relative;
+  width: 379.95px;
+  height: 308px;
+  object-fit: cover;
+}
+.frameInner {
+  position: relative;
+  width: 382.96px;
+  height: 308px;
+  object-fit: cover;
+}
+.frameDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 80px;
+}
+.coursesContainer {
+  position: absolute;
+  width: 70.38%;
+  top: calc(50% - 94.5px);
+  right: 29.62%;
+  left: 0%;
+  height: 95.7px;
+  font-size: var(--font-size-smi);
+  color: var(--color-mediumseagreen);
+}
+.graphicDesignGroup {
+  position: absolute;
+  width: 29.39%;
+  top: calc(50% + 51px);
+  right: 0%;
+  left: 70.61%;
+  height: 189px;
+}
+.frameParent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1303px;
+  height: 480px;
+}
+.groupParent {
+  position: relative;
+  width: 1303px;
+  height: 480px;
+  font-size: var(--font-size-4xl);
+  color: var(--color-gray-100);
+}
+.rectangleDiv2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #ffbe16;
+  width: 180px;
+  height: 60px;
+}
+.morePosts {
+  position: absolute;
+  top: 22px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  line-height: 16px;
+  font-weight: 600;
+  width: 180px;
+}
+.rectangleParent2 {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.ourLatestBlogParent {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-self: center;
+  gap: 64px;
+}
+.blogSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  font-size: 48px;
+  color: #282a2e;
+  font-family: var(--font-poppins);
+}
+
+.footerSectionChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #000;
+  width: 100%;
+  height: 385px;
+}
+.madeWithPassion1 {
+  position: absolute;
+  top: 331px;
+  left: 955px;
+  letter-spacing: 0.01em;
+  line-height: 125%;
+  color: #f3f3f3;
+  text-align: right;
+}
+.cospace {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.logo {
+  position: absolute;
+  top: 329px;
+  left: 133px;
+  width: 112px;
+  height: 24px;
+  font-size: 24px;
+  color: var(--color-white);
+}
+.privacyPolicy {
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+}
+.company1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  letter-spacing: 1px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.company {
+  position: absolute;
+  top: 60px;
+  left: 1159px;
+  width: 144px;
+  height: 141px;
+}
+.contactUs {
+  position: absolute;
+  top: 115px;
+  left: 0px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+}
+.support {
+  position: absolute;
+  top: 60px;
+  left: 904px;
+  width: 126px;
+  height: 141px;
+}
+.youtube {
+  position: absolute;
+  top: 151px;
+  left: 0px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+}
+.instagram {
+  position: absolute;
+  top: 79px;
+  left: 0px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+}
+.community {
+  position: absolute;
+  top: 60px;
+  left: 655px;
+  width: 111px;
+  height: 177px;
+}
+.resources {
+  position: absolute;
+  top: 60px;
+  left: 408px;
+  width: 102px;
+  height: 141px;
+}
+.feature {
+  position: absolute;
+  top: 60px;
+  left: 121px;
+  width: 166px;
+  height: 141px;
+}
+.footerSectionItem {
+  position: absolute;
+  top: 296.5px;
+  left: 119.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  width: 1201px;
+  height: 1px;
+}
+.footerSection {
+  position: relative;
+  width: 100%;
+  height: 385px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-silver);
+  font-family: var(--font-poppins);
+}

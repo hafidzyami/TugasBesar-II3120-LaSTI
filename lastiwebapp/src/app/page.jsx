@@ -1,8 +1,18 @@
+"use client";
 import React from "react";
-import FloatingLabel from "react-bootstrap";
-import Form from "react-bootstrap";
-import Button from "react-bootstrap";
+
 import styles from "./page.module.css";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "./style.css";
+
+// import required modules
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 const page = () => {
   return (
@@ -103,73 +113,6 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div>
-          <img
-            src="/bgheader.png"
-            alt="backgroundheader"
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              width: "100%",
-              height: "100%",
-              color: "#fff",
-            }}
-          >
-            <div className={styles.content}>
-              <b className={styles.comfortableCoworkingSpace1}>
-                Comfortable coworking space.
-              </b>
-              <div
-                className={styles.ourCoworkingSpaces1}
-              >{`Our coworking spaces let you choose to work with others in an open-plan area, or a shared office. `}</div>
-              <div className={styles.btnStarted}>
-                <div className={styles.btnStartedChild} />
-                <div className={styles.bookATour}>BOOK A TOUR</div>
-              </div>
-              <div className={styles.aboutUs}>About Us</div>
-            </div>
-          </div>
-        </div>
-        {/* <div className={styles.header}>
-          <img className={styles.headerChild} alt="" src="/bgheader.png" />
-          <div className={styles.headerItem} />
-          <div className={styles.navbar}>
-            <div className={styles.cospace}>Cospace</div>
-            <div className={styles.menu}>
-              <b className={styles.home}>Home</b>
-              <div className={styles.features}>Features</div>
-              <div className={styles.services}>Services</div>
-              <div className={styles.about}>About</div>
-              <div className={styles.location}>Location</div>
-            </div>
-            <div className={styles.btnJoin}>
-              <div className={styles.btnJoinChild} />
-              <div className={styles.bookNow}>Book Now</div>
-            </div>
-          </div>
-          <div className={styles.content}>
-            <b className={styles.comfortableCoworkingSpace1}>
-              Comfortable coworking space.
-            </b>
-            <div
-              className={styles.ourCoworkingSpaces1}
-            >{`Our coworking spaces let you choose to work with others in an open-plan area, or a shared office. `}</div>
-            <div className={styles.btnStarted}>
-              <div className={styles.btnStartedChild} />
-              <div className={styles.bookATour}>BOOK A TOUR</div>
-            </div>
-            <div className={styles.aboutUs}>About Us</div>
-          </div>
-          <div className={styles.headerInner} />
-        </div> */}
       </div>
       <div className="vh-100 vw-100">
         <div className={styles.aboutSection}>
@@ -216,8 +159,7 @@ const page = () => {
       <div className="vh-100 vw-100">
         <div className="d-flex vh-100 vw-100">
           <img
-            class="align-self-end"
-            className={{ objectFit: "cover" }}
+            style={{ objectFit: "cover" }}
             src="shridhar-gupta-dZxQn4VEv2M-unsplash 1.png"
           />
         </div>
@@ -289,8 +231,214 @@ const page = () => {
           </div>
         </div>
       </div>
+      <div className="vh-100 vw-100">
+        <div className="d-flex justify-content-center vw-100">
+          <b
+            style={{
+              fontSize: "36px",
+              textTransform: "capitalize",
+              display: "inline-block",
+            }}
+          >
+            Space Overview
+          </b>
+        </div>
+        <div className="mt-5 mb-4 d-flex justify-content-center vw-100">
+          <div
+            style={{
+              fontSize: "24px",
+              textTransform: "capitalize",
+              display: "inline-block",
+              textAlign: "center",
+              width: "750px",
+            }}
+          >{`Generate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore `}</div>
+        </div>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          loop={true}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: -30,
+            depth: 100,
+            modifier: 3,
+            slideShadows: true,
+          }}
+          pagination={true}
+          navigation={true}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src="space_1.png" />
+            <b
+              className="mt-4 mb-2 d-flex justify-content-center"
+              style={{ color: "#FFBE16", fontSize: "24px" }}
+            >
+              Space Room #1
+            </b>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="space_2.png" />
+            <b
+              className="mt-4 mb-2 d-flex justify-content-center"
+              style={{ color: "#FFBE16", fontSize: "24px" }}
+            >
+              Space Room #2
+            </b>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="space_3.png" />
+            <b
+              className="mt-4 mb-2 d-flex justify-content-center"
+              style={{ color: "#FFBE16", fontSize: "24px" }}
+            >
+              Space Room #3
+            </b>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="space_4.png" />
+            <b
+              className="mt-4 mb-2 d-flex justify-content-center"
+              style={{ color: "#FFBE16", fontSize: "24px" }}
+            >
+              Space Room #4
+            </b>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="space_5.png" />
+            <b
+              className="mt-4 mb-2 d-flex justify-content-center"
+              style={{ color: "#FFBE16", fontSize: "24px" }}
+            >
+              Space Room #5
+            </b>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="space_6.jpg" />
+            <b
+              className="mt-4 mb-2 d-flex justify-content-center"
+              style={{ color: "#FFBE16", fontSize: "24px" }}
+            >
+              Space Room #6
+            </b>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="vh-100 vw-100">
+        <div className={styles.blogSection}>
+          <div className={styles.ourLatestBlogParent}>
+            <div className={styles.ourLatestBlog1}>Our Latest Blog</div>
+            <div className={styles.groupParent}>
+              <div className={styles.graphicDesignParent}>
+                <div className={styles.graphicDesign}>
+                  <p
+                    className={styles.whyYourBusiness}
+                  >{`Why your business absolutely `}</p>
+                  <p className={styles.whyYourBusiness}>
+                    needs a virtual office
+                  </p>
+                </div>
+                <div className={styles.coursesParent}>
+                  <div className={styles.courses}>INTERIOR</div>
+                  <div className={styles.groupChild} />
+                  <div className={styles.courses1}>5 mins read</div>
+                </div>
+              </div>
+              <div className={styles.groupDiv}>
+                <div className={styles.coursesGroup}>
+                  <div className={styles.courses2}>TIPS TRICK</div>
+                  <div className={styles.groupItem} />
+                  <div className={styles.courses3}>5 mins read</div>
+                </div>
+                <div className={styles.graphicDesign1}>
+                  How to Run Your Freelance Design Business on the Cheap
+                </div>
+              </div>
+              <div className={styles.frameParent}>
+                <div className={styles.frameDiv}>
+                  <img
+                    className={styles.frameChild}
+                    alt="Blog1"
+                    src="blog_1.png"
+                  />
+                  <img
+                    className={styles.frameChild}
+                    alt="Blog2"
+                    src="blog_2.png"
+                  />
+                  <img
+                    className={styles.frameInner}
+                    alt="Blog3"
+                    src="blog_3.png"
+                  />
+                </div>
+                <div className={styles.graphicDesignGroup}>
+                  <div className={styles.graphicDesign}>
+                    Getting Clients to Care About Their Website Long Term
+                  </div>
+                  <div className={styles.coursesContainer}>
+                    <div className={styles.courses2}>FREELANCE</div>
+                    <div className={styles.groupItem} />
+                    <div className={styles.courses3}>5 mins read</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.rectangleParent2}>
+              <div className={styles.rectangleDiv2} />
+              <div className={styles.morePosts}>More Posts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="vw-100">
+        <div className={styles.footerSection}>
+          <div className={styles.footerSectionChild} />
+          <div className={styles.madeWithPassion1}>
+            © 2022, Made with passion by CoWork Group 6
+          </div>
+          <div className={styles.logo}>
+            <div className={styles.cospace}>Cospace</div>
+          </div>
+          <div className={styles.company}>
+            <div className={styles.contactUs}>Code of Conduct</div>
+            <div className={styles.instagram}>Terms of Service</div>
+            <div className={styles.privacyPolicy}>Privacy Policy</div>
+            <b className={styles.company1}>Company</b>
+          </div>
+          <div className={styles.support}>
+            <div className={styles.contactUs}>Contact Us</div>
+            <div className={styles.instagram}>{`Help & Support`}</div>
+            <div className={styles.privacyPolicy}>My Account</div>
+            <b className={styles.company1}>Support</b>
+          </div>
+          <div className={styles.community}>
+            <div className={styles.youtube}>Youtube</div>
+            <div className={styles.contactUs}>Facebook</div>
+            <div className={styles.instagram}>Instagram</div>
+            <div className={styles.privacyPolicy}>Twitter</div>
+            <b className={styles.company1}>Community</b>
+          </div>
+          <div className={styles.resources}>
+            <div className={styles.contactUs}>Newsletter</div>
+            <div className={styles.instagram}>Support</div>
+            <div className={styles.privacyPolicy}>Blog</div>
+            <b className={styles.company1}>Resources</b>
+          </div>
+          <div className={styles.feature}>
+            <div className={styles.contactUs}>File Manager</div>
+            <div className={styles.instagram}>Tasks Schedule</div>
+            <div className={styles.privacyPolicy}>Team Management</div>
+            <b className={styles.company1}>Feature</b>
+          </div>
+          <div className={styles.footerSectionItem} />
+        </div>
+      </div>
     </>
   );
 };
-
 export default page;

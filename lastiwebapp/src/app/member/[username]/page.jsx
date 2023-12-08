@@ -54,14 +54,14 @@ const HomePage = () => {
       .select();
 
     if (error) {
-      window.alert("Gagal melakukan pembayaran!")
+      window.alert("Gagal melakukan pembayaran!");
     }
   };
 
-  const handleBayar2 = () =>{
+  const handleBayar2 = () => {
     setShow(true);
     setTotalWaktu(calculateHourDifference(timeIn, timeOut));
-  }
+  };
 
   const handleBayar = async (e) => {
     // Ini Bayar
@@ -79,7 +79,7 @@ const HomePage = () => {
       .update({ timeIn: null, timeOut: null })
       .eq("username", params.username)
       .select();
-    window.alert("Berhasil melakukan pembayaran!")
+    window.alert("Berhasil melakukan pembayaran!");
   };
 
   const channels = supabase
@@ -124,10 +124,15 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div>
       {/* Modal */}
       <>
-        <Modal show={show} onHide={()=>{setShow(false)}}>
+        <Modal
+          show={show}
+          onHide={() => {
+            setShow(false);
+          }}
+        >
           <Modal.Header closeButton>
             <Modal.Title>Konfirmasi Pembayaran</Modal.Title>
           </Modal.Header>
@@ -140,7 +145,12 @@ const HomePage = () => {
             <p>Biaya total : Rp {totalWaktu * 5000}</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger" onClick={()=>{setShow(false)}}>
+            <Button
+              variant="danger"
+              onClick={() => {
+                setShow(false);
+              }}
+            >
               Batal
             </Button>
             <Button variant="success" onClick={handleBayar}>
@@ -149,22 +159,98 @@ const HomePage = () => {
           </Modal.Footer>
         </Modal>
       </>
-      HomePage
-      <div className="mt-5">
-        {!isIn && !isDone ? <p>Barcode Masuk:</p> : <></>}
-        {isIn && !isDone ? <p>Barcode Keluar:</p> : <></>}
-        {isDone ? (
-          <Button variant="primary" className="mt-3" onClick={handleBayar2}>
-            Bayar
-          </Button>
-        ) : (
-          <img src={imageUrl} width={300} height={300} className="mb-5" />
-        )}
+      <nav class="navbar navbar-expand-md bg-dark bg-opacity-50 fixed-top">
+        <div class="container">
+          <a class="navbar-brand mx-3 text-light fw-bold" href="#">
+            Cospace
+          </a>
+          <button
+            class="navbar-toggler collapsed bg-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end mx-3"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-light" data-toggle="dropdown" href="#">
+                  Testimoni
+                </a>
+              </li>
 
-        <p>Waktu Masuk: {timeIn}</p>
-        <p>Waktu Keluar: {timeOut}</p>
-
-        {isBayar ? <p>{calculateFee(timeOut, timeIn)}</p> : <></>}
+              <li class="nav-item">
+                <a class="nav-link text-light" data-toggle="dropdown" href="#">
+                  Our Member
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div className="vh-100 vw-100">
+        <div>
+          <img
+            src="/bgheader.png"
+            alt="backgroundheader"
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+          <div
+            className="d-flex vh-100 vw-100"
+            style={{
+              position: "absolute",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+              width: "100%",
+              height: "100%",
+              color: "#fff",
+            }}
+          >
+            <div className="mx-5 align-self-center">
+              <b
+                style={{
+                  fontSize: "64px",
+                }}
+              >
+                Scan Here
+              </b>
+              <div className="mt-1">
+                {!isIn && !isDone ? <p>Barcode Masuk:</p> : <></>}
+                {isIn && !isDone ? <p>Barcode Keluar:</p> : <></>}
+                {isDone ? (
+                  <Button
+                    variant="primary"
+                    className="mt-3"
+                    onClick={handleBayar2}
+                  >
+                    Bayar
+                  </Button>
+                ) : (
+                  <img
+                    src={imageUrl}
+                    width={400}
+                    height={400}
+                    className="mb-5"
+                  />
+                )}
+                <p>Waktu Masuk: {timeIn}</p>
+                <p>Waktu Keluar: {timeOut}</p>
+                {isBayar ? <p>{calculateFee(timeOut, timeIn)}</p> : <></>}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
