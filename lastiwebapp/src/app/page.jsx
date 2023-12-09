@@ -18,7 +18,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { useRouter } from "next/navigation";
 
 const page = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <Navbar
