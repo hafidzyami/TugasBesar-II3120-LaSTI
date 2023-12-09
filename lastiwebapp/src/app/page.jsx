@@ -15,8 +15,10 @@ import "./style.css";
 
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { useRouter } from "next/navigation";
 
 const page = () => {
+  const router = useRouter()
   return (
     <>
       <Navbar
@@ -50,8 +52,8 @@ const page = () => {
               <Nav.Link className="text-light" href="#">
                 Our Blog
               </Nav.Link>
-              <Nav.Link className="text-light bg-warning" href="#">
-                Book Now
+              <Nav.Link className="text-light bg-warning" href="/login">
+                Login
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -87,7 +89,7 @@ const page = () => {
               >{`Our coworking spaces let you choose to work with others in an open-plan area, or a shared office. `}</div>
               <div className={styles.btnStarted}>
                 <div className={styles.btnStartedChild} />
-                <button className={styles.bookATour} style={{ backgroundColor : 'transparent', border: 'none' }}>BOOK A TOUR</button>
+                <button className={styles.bookATour} style={{ backgroundColor : 'transparent', border: 'none' }} onClick={()=>router.push("/login")}>LOGIN NOW</button>
               </div>
               <div className={styles.aboutUs}>About Us</div>
             </div>
