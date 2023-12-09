@@ -78,8 +78,8 @@ const AdminDashboard = () => {
             {!transaksi
               ? ""
               : transaksi.map((item, index) => (
-                  <tr>
-                    <th scope="row" key={index}>{item.id}</th>
+                  <tr key={index}>
+                    <th scope="row">{item.id}</th>
                     <td>{item.username}</td>
                     <td>{item.timeIn}</td>
                     <td>{item.timeOut}</td>
