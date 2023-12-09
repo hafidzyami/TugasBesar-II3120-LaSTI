@@ -54,7 +54,7 @@ const LoginCustomer = () => {
           <div className="container-fluid">
             <FloatingLabel
               controlId="floatingInput"
-              label="Email address"
+              label="Username"
               className="mb-3 text-dark"
             >
               <Form.Control
