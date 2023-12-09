@@ -90,7 +90,7 @@ const RegisterCustomer = () => {
             style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
           >
             Have an account?
-            <a href="#!" className="mx-2 fw-bold">
+            <a href="/login" className="mx-2 fw-bold">
               Login
             </a>
           </div>

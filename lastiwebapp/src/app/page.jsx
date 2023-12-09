@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
 
 import styles from "./page.module.css";
 // Import Swiper React components
@@ -16,7 +15,6 @@ import "./style.css";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 const page = () => {
-  const router = useRouter()
   return (
     <>
       <nav class="navbar navbar-expand-md bg-dark bg-opacity-50 fixed-top">
@@ -45,34 +43,34 @@ const page = () => {
                   class="nav-link text-light"
                   data-toggle="dropdown"
                   aria-current="page"
-                  href="#"
+                  href="/"
                 >
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="#">
+                <a class="nav-link text-light" data-toggle="dropdown" href="/">
                   Features
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="#">
+                <a class="nav-link text-light" data-toggle="dropdown" href="/">
                   Testimoni
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="#">
+                <a class="nav-link text-light" data-toggle="dropdown" href="/">
                   About
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="#">
+                <a class="nav-link text-light" data-toggle="dropdown" href="/">
                   Our Blog
                 </a>
               </li>
               <li class="nav-item bg-warning">
-                <a class="nav-link text-light" data-toggle="dropdown" href="#">
-                  Login
+                <a class="nav-link text-light" data-toggle="dropdown" href="/login">
+                  Login Now
                 </a>
               </li>
             </ul>
@@ -109,7 +107,7 @@ const page = () => {
               >{`Our coworking spaces let you choose to work with others in an open-plan area, or a shared office. `}</div>
               <div className={styles.btnStarted}>
                 <div className={styles.btnStartedChild} />
-                <div className={styles.bookATour} onClick={()=>router.push("/login")}>Login</div>
+                <button className={styles.bookATour} style={{ backgroundColor : 'transparent', border: 'none' }}>BOOK A TOUR</button>
               </div>
               <div className={styles.aboutUs}>About Us</div>
             </div>
