@@ -5,6 +5,7 @@ import supabase from "@/app/config/supabase";
 import { useParams } from "next/navigation";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Image from "next/image";
 
 const HomePage = () => {
   const params = useParams();
