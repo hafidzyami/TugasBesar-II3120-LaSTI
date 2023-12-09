@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
-
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import styles from "./page.module.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,66 +19,44 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 const page = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-md bg-dark bg-opacity-50 fixed-top">
-        <div class="container">
-          <a class="navbar-brand mx-5 text-light fw-bold" href="/">
+      <Navbar
+        fixed="top"
+        collapseOnSelect
+        expand="lg"
+        className="bg-dark bg-opacity-50"
+      >
+        <Container>
+          <Navbar.Brand className="text-light fw-bold" href="#">
             Cospace
-          </a>
-          <button
-            class="navbar-toggler collapsed bg-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse
+            className="justify-content-end"
+            id="responsive-navbar-nav"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end mx-5"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light"
-                  data-toggle="dropdown"
-                  aria-current="page"
-                  href="/"
-                >
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="/">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="/">
-                  Testimoni
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="/">
-                  About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" data-toggle="dropdown" href="/">
-                  Our Blog
-                </a>
-              </li>
-              <li class="nav-item bg-warning">
-                <a class="nav-link text-light" data-toggle="dropdown" href="/login">
-                  Login Now
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+            <Nav>
+              <Nav.Link className="text-light" href="#">
+                Home
+              </Nav.Link>
+              <Nav.Link className="text-light" href="#">
+                Features
+              </Nav.Link>
+              <Nav.Link className="text-light" href="#">
+                Testimoni
+              </Nav.Link>
+              <Nav.Link className="text-light" href="#">
+                About
+              </Nav.Link>
+              <Nav.Link className="text-light" href="#">
+                Our Blog
+              </Nav.Link>
+              <Nav.Link className="text-light bg-warning" href="#">
+                Book Now
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <div className="vh-100 vw-100">
         <div>
           <img
