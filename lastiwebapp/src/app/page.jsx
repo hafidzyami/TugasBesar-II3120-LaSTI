@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 import styles from "./page.module.css";
 // Import Swiper React components
@@ -15,11 +16,12 @@ import "./style.css";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 const page = () => {
+  const router = useRouter()
   return (
     <>
       <nav class="navbar navbar-expand-md bg-dark bg-opacity-50 fixed-top">
         <div class="container">
-          <a class="navbar-brand mx-5 text-light fw-bold" href="#">
+          <a class="navbar-brand mx-5 text-light fw-bold" href="/">
             Cospace
           </a>
           <button
@@ -70,7 +72,7 @@ const page = () => {
               </li>
               <li class="nav-item bg-warning">
                 <a class="nav-link text-light" data-toggle="dropdown" href="#">
-                  Book Now
+                  Login
                 </a>
               </li>
             </ul>
@@ -107,7 +109,7 @@ const page = () => {
               >{`Our coworking spaces let you choose to work with others in an open-plan area, or a shared office. `}</div>
               <div className={styles.btnStarted}>
                 <div className={styles.btnStartedChild} />
-                <div className={styles.bookATour}>BOOK A TOUR</div>
+                <div className={styles.bookATour} onClick={()=>router.push("/login")}>Login</div>
               </div>
               <div className={styles.aboutUs}>About Us</div>
             </div>

@@ -116,7 +116,7 @@ const LoginCustomer = () => {
             style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
           >
             New user?
-            <a href="#!" className="mx-2 fw-bold">
+            <a href="/register" className="mx-2 fw-bold">
               Sign Up
             </a>
           </div>
