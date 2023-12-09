@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
 import supabase from "../config/supabase";
 
@@ -13,19 +13,25 @@ const LoginCustomer = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    let { data: Member, error } = await supabase
+    let { data, error } = await supabase
       .from("Member")
       .select("*")
       .eq("username", username)
       .eq("password", password);
 
-    if(error){
-      window.alert("Invalid Credentials!")
-      setPassword("")
-      setUsername("")
+    if(username == "admin" && password == "admin"){
+        router.push("/admin/admin")
     }
     else{
-      router.push(`/member/${username}`)
+      if(data.length == 0){
+        window.alert("Invalid Credentials!")
+        setPassword("")
+        setUsername("")
+      }
+      else{
+        router.push(`/member/${username}`)
+      }
+
     }
   };
 
