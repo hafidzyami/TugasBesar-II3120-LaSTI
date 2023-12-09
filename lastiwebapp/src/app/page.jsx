@@ -17,7 +17,7 @@ import "./style.css";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const LandingPage = () => {
   const router = useRouter();
   return (
     <>
@@ -423,4 +423,4 @@ const page = () => {
     </>
   );
 };
-export default page;
+export default LandingPage;
