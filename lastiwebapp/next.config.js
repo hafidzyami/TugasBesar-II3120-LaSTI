@@ -1,16 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import('next').NextConfig
+
+module.exports = {
     reactStrictMode: true,
     images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: '**',
-                port: '',
-                pathname: '**',
-            },
-        ],
+        domains: ["barcodeapi.org"],
+        formats: ["image/webp"],
     },
-}
+};
 
 module.exports = nextConfig;
