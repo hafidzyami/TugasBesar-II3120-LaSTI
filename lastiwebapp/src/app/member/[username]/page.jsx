@@ -237,11 +237,12 @@ const HomePage = () => {
                     Bayar
                   </Button>
                 ) : (
-                  <img
+                  <Image
                     src={imageUrl}
                     width={400}
                     height={400}
                     className="mb-5"
+                    alt = "barcode"
                   />
                 )}
                 <p>Waktu Masuk: {timeIn}</p>
