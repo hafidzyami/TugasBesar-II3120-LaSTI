@@ -240,8 +240,8 @@ const HomePage = () => {
                 ) : (
                   <Image
                     src={imageUrl}
-                    width={400}
-                    height={400}
+                    width={250}
+                    height={250}
                     className="mb-5"
                     alt = "barcode"
                   />
