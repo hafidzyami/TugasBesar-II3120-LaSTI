@@ -6,14 +6,14 @@ Website: <br/>
 https://coworkbandung.vercel.app/
 
 ## Folder Structure
-📦TugasBesar-II3120-LaSTI
- ┣ 📦ESP32CAM
+📦TugasBesar-II3120-LaSTI <br/>
+ ┣ 📦ESP32CAM <br/>
  ┣ 📦lastiwebapp
 
-📦ESP32CAM
- ┣ 📂code
- ┃ ┗ 📜code.ino
- ┗ 📜scanbarcode.py
+📦ESP32CAM <br/>
+ ┣ 📂code <br/>
+ ┃ ┗ 📜code.ino <br/>
+ ┗ 📜scanbarcode.py <br/>
 
 📜code.ino </br>
 To Run ESP32CAM
