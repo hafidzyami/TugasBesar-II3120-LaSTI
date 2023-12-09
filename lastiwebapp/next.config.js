@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
     reactStrictMode: true,
     images: {
         domains: ["barcodeapi.org"],
         formats: ["image/webp"]
-    }
+    },
 };
 
 module.exports = nextConfig;
